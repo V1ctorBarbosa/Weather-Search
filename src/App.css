@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+.app {
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    font-family: "Merriweather Sans", sans-serif;
+    color: white;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content > * {
+    justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.search-input {
+    display: flex;
+    position: absolute;
+    margin: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(1px);
+    overflow: hidden;
+    padding: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input>input {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input>input::placeholder {
+    color: white;
+    opacity: .5;
 }
+
+.search-button {
+    cursor: pointer;
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.search-button:hover {
+    transform: scale(1.4);
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.degree {
+    font-size: 10vh;
+}
+
+.location {
+    font-size: 2vh;
+}
+
