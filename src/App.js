@@ -22,7 +22,7 @@ function App() {
 
 
   const handleFetch = () => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}=${place}&aqi=no`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=37f25b3b3f9d47069f8223215220505&q=${place}&aqi=no`)
       .then(response => response.json())
       .then(data => setPlaceInfo({
         name: data.location.name,
