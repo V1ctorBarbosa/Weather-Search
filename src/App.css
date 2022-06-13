@@ -27,7 +27,7 @@
 .search-input {
     display: flex;
     position: absolute;
-    margin: 80px;
+    margin: 80px auto;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
